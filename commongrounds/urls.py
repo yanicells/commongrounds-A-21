@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.shortcuts import render
-from django.urls import path
+from django.urls import include, path
 
 def home(request):
     return render(request, 'home.html')
@@ -24,4 +24,5 @@ def home(request):
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
+    path('merchstore/', include('merchstore.urls', namespace='merchstore')),
 ]
