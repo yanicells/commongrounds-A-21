@@ -1,3 +1,15 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Project, ProjectCategory
+
+
+class ProjectCategoryAdmin(admin.ModelAdmin):
+    model = ProjectCategory
+
+
+class ProjectAdmin(admin.ModelAdmin):
+    model = Project
+
+
+admin.site.register(ProjectCategory, ProjectCategoryAdmin)
+admin.site.register(Project, ProjectAdmin)
