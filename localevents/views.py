@@ -9,11 +9,11 @@ def event_list(request):
     ctx = {
         'events': events
     }
-    return render(request, 'localevents/event_list.html', ctx)
+    return render(request, 'event_list.html', ctx)
 
 def event_detail(request, pk):
     event = Event.objects.get(pk=pk)
     ctx = {
         'event': event
     }
-    return render(request, 'localevents/event_detail.html', ctx)
+    return render(request, 'event_detail.html', ctx)
