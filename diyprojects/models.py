@@ -8,6 +8,7 @@ class ProjectCategory(models.Model):
 
     class Meta:
         ordering = ['name']
+        verbose_name_plural = 'ProjectCategories'
 
     def __str__(self):
         return f'{self.name}'
@@ -31,7 +32,7 @@ class Project(models.Model):
         ordering = ['-created_on']
 
     def __str__(self):
-        return f'{self.name}'
+        return f'{self.title}'
 
     def get_absolute_url(self):
         return reverse("diyprojects:project-detail", args=[str(self.pk)])
