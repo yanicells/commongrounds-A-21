@@ -27,4 +27,5 @@ urlpatterns = [
     path('merchstore/', include('merchstore.urls', namespace='merchstore')),
     path('bookclub/', include('bookclub.urls', namespace='bookclub')),
     path('commissions/', include('commissions.urls', namespace='commissions')),
+    path('diyprojects/', include('diyprojects.urls', namespace='diyprojects'))
 ]
