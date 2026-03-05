@@ -22,7 +22,7 @@ class Event(models.Model):
         blank=True,
     )
     description = models.TextField()
-    location = models.CharField(max_length=255)
+    location = models.CharField()
     start_time = models.DateTimeField()
     end_time = models.DateTimeField()
     created_on = models.DateTimeField(auto_now_add=True)
