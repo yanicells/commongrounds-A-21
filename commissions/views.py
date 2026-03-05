@@ -1,12 +1,19 @@
 from django.shortcuts import render
-from .models import *
-from django.views.generic.list import ListView
-from django.views.generic.detail import DetailView
 
-class CommissionListView(ListView):
-    model = Commission
-    template_name = 'commission_list.html'
+from .models import Commission
 
-class CommissionDetailView(DetailView):
-    model = Commission
-    template_name = 'commission_details.html'
+
+def request_list(request):
+    commissions = Commission.objects.all()
+    ctx = {
+        'commissions': commissions
+    }
+    return render(request, 'commissions/request_list.html', ctx)
+
+
+def request_detail(request, pk):
+    commission = Commission.objects.get(pk=pk)
+    ctx = {
+        'commission': commission
+    }
+    return render(request, 'commissions/request_detail.html', ctx)
