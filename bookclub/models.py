@@ -1,7 +1,6 @@
 from django.db import models
 from django.urls import reverse
 
-# Create your models here.
 
 class Genre(models.Model):
     name = models.CharField(max_length=255)
@@ -22,9 +21,9 @@ class Book(models.Model):
         null=True,
         blank=True,
     )
-    author = models.CharField()
+    author = models.CharField(max_length=255)
     publication_year = models.IntegerField()
-    created_on = models.DateTimeField(auto_now_add=True, null=True)
+    created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
 
     class Meta:
