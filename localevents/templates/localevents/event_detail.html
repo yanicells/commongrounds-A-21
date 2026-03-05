@@ -1,20 +1,16 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %}{{ event.title }}{%endblock %}
-
+{% block title %}{{ event.title }}{% endblock %}
 {% block content %}
-<h2>Local Event Details</h2>
-<h3>Event: {{ event.title }}</h3>
-<p>
-  Created on: {{ event.created_on }}<br />
-  Updated on: {{ event.updated_on }}<br />
-</p>
-<p>
-  <strong>Category:</strong> {{ event.category }}<br />
-  <strong>Location:</strong> {{ event.location }}<br />
-  <strong>Start Time: </strong> {{ event.start_time }}<br />
-  <strong>End Time: </strong> {{ event.end_time }}<br />
-</p>
-<p><strong>Description:</strong> <br />{{ event.description }}</p>
+<h2>Local Event: {{ event.title }}</h2>
+<ul>
+    <li><strong>Category:</strong> {{ event.category }}<br></li>
+    <li><strong>Location:</strong> {{ event.location }}<br></li>
+    <li><strong>Start Time: </strong> {{ event.start_time }}<br></li>
+    <li><strong>End Time: </strong> {{ event.end_time }}<br></li>
+    <li><strong>Created on:</strong> {{ event.created_on }}<br></li>
+    <li><strong>Updated on:</strong> {{ event.updated_on }}<br></li>
+</ul>
+<p><strong>Description:</strong> {{ event.description }}</p>
 <a href="{% url 'localevents:event_list' %}">Back to all events</a>
 {% endblock content %}
