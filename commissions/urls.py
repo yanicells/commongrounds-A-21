@@ -1,11 +1,10 @@
-from django.contrib import admin
-from django.shortcuts import render
 from django.urls import path
-from .views import *
 
-urlpatterns = [
-    path('requests', CommissionListView.as_view(), name='commission_list'),
-    path('request/<int:pk>', CommissionDetailView.as_view(), name='commission_detail')
-]
+from . import views
 
 app_name = 'commissions'
+
+urlpatterns = [
+    path('requests', views.request_list, name='request-list'),
+    path('request/<int:pk>', views.request_detail, name='request-detail'),
+]
