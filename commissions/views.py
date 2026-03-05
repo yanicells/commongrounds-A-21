@@ -5,8 +5,8 @@ from django.views.generic.detail import DetailView
 
 class CommissionListView(ListView):
     model = Commission
-    template_name = ''
+    template_name = 'list.html'
 
 class CommissionDetailView(DetailView):
     model = Commission
-    template_name = ''
+    template_name = 'commission.html'
