@@ -10,5 +10,6 @@ class EventTypeAdmin(admin.ModelAdmin):
 class EventAdmin(admin.ModelAdmin):
     model = Event
 
+
 admin.site.register(EventType, EventTypeAdmin)
 admin.site.register(Event, EventAdmin)
