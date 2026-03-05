@@ -4,8 +4,8 @@ from django.urls import path
 from .views import *
 
 urlpatterns = [
-    path('requests', CommissionListView.as_view(), name='list_view'),
-    path('request/<int:pk>', CommissionDetailView.as_view(), name='detail_view')
+    path('requests', CommissionListView.as_view(), name='commission_list'),
+    path('request/<int:pk>', CommissionDetailView.as_view(), name='commission_detail')
 ]
 
 app_name = 'commissions'
