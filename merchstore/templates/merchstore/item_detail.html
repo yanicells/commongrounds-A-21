@@ -4,9 +4,12 @@
 {% block title %}{{ product.name }}{% endblock %}
 
 {% block content %}
-  <h1>{{ product.name }}</h1>
-  <p><strong>Type:</strong> {{ product.product_type }}</p>
-  <p><strong>Price:</strong> P{{ product.price }}</p>
-  <p>{{ product.description }}</p>
+  <h2>{{ product.name }}</h2>
+  <ul>
+    <li><strong>Type:</strong> {{ product.product_type }}</li>
+    <li><strong>Price:</strong> P{{ product.price }}</li>
+    <li><strong>Description:</strong> {{ product.description }}</li>
+  </ul>
+
   <a href="{% url 'merchstore:item-list' %}">Back to all items</a>
 {% endblock %}
