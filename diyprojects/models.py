@@ -19,13 +19,13 @@ class Project(models.Model):
     category = models.ForeignKey(
         ProjectCategory,
         on_delete=models.SET_NULL,
-        null = True,
-        blank = True
+        null=True,
+        blank=True,
     )
     description = models.TextField()
     materials = models.TextField()
     steps = models.TextField()
-    created_on = models.DateTimeField(auto_now_add=True, null=True)
+    created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
 
     class Meta:
@@ -36,4 +36,3 @@ class Project(models.Model):
 
     def get_absolute_url(self):
         return reverse("diyprojects:project-detail", args=[str(self.pk)])
-   

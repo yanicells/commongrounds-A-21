@@ -1,15 +1,11 @@
-{% extends 'base.html' %}
-{% load static %}
-
-{% block title %}{{ project.title }}{% endblock %}
-
-{% block content %}
-  <h1>{{ project.title }}</h1>
-  <p><strong>Category:</strong> {{ project.category }}</p>
-  <p>{{ project.description }}</p>
-  <p><strong>Materials:</strong> {{ project.materials }}</p>
-  <p><strong>Steps:</strong> {{ project.steps }}</p>
-  <p><strong>Created On:</strong> {{ project.created_on }}</p>
-  <p><strong>Updated on:</strong> {{ project.updated_on }}</p>
-  <a href="{%url 'diyprojects:project-list'%}">Back to all projects</a>
+{% extends 'base.html' %} {% load static %} {% block title %}{{ project.title
+}}{% endblock %} {% block content %}
+<h1>{{ project.title }}</h1>
+<p><strong>Category:</strong> {{ project.category }}</p>
+<p>{{ project.description }}</p>
+<p><strong>Materials:</strong> {{ project.materials }}</p>
+<p><strong>Steps:</strong> {{ project.steps }}</p>
+<p><strong>Created On:</strong> {{ project.created_on }}</p>
+<p><strong>Updated on:</strong> {{ project.updated_on }}</p>
+<a href="{% url 'diyprojects:project-list' %}">Back to all projects</a>
 {% endblock %}
