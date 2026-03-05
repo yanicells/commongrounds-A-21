@@ -18,8 +18,8 @@ class Product(models.Model):
     product_type = models.ForeignKey(
         ProductType,
         on_delete=models.SET_NULL,
-        null = True,
-        blank = True
+        null=True,
+        blank=True
     )
     description = models.TextField()
     price = models.DecimalField(max_digits=10, decimal_places=2)
