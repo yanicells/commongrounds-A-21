@@ -1,8 +1,5 @@
-Common Grounds - CSCI 40 Midterm Project - Group 21
-
-Group Members:
-Capistrano, Edrian Miguel
-Infante, Edizon Luis
-Martin, Nathan Gabryll
-Terrobias, John Kyrk
-Torres, Sofia Dion
+CAPISTRANO, Edrian Miguel (yanicells)
+INFANTE, Edizon Luis (skibizo)
+MARTIN, Nathan Gabryll (GabiNaTulogNa)
+TERROBIAS, John Kyrk (jktrr)
+TORRES, Sofia Dion (Eostrixx)
