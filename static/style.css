@@ -1,0 +1,58 @@
+body {
+  background-color: #F5F0EB;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, serif;
+}
+
+.intro {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #F5F0EB;
+}
+
+.navbar-brand {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.navbar-links a {
+  color: #333;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+a {
+  color: #333;
+  text-decoration: underline;
+}
