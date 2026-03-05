@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
-{% load static %} 
-{% block title %}{{ commission.title }}{% endblock %}
+{% load static %}
+{% block title %}{{ commission.title}}{% endblock %}
 
 {% block content %}
 <h2>Commission Details</h2>
 <h3>{{ commission.title }}</h3>
 
 <p>
-  <strong>Commission Type:</strong> {{ commission.type }}<br />
+  <strong>Commission Type:</strong> {{ commission.commission_type }}<br />
   <strong>People Required:</strong> {{ commission.people_required }}<br />
   <strong>Created on:</strong> {{ commission.created_on }}<br />
   <strong>Updated on:</strong> {{ commission.updated_on }}<br />
