@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Commission Details</h2>
+    <h3>{{ object.title }}</h3>
+
+    <p>
+        <strong>Commission Type:</strong> {{ object.type }}<br>
+        <strong>People Required: </strong> {{ object.people_required }}<br>
+        <strong>Created on</strong>: {{ object.created_on }}<br>
+        <strong>Updated on</strong>: {{ object.updated_on }}<br>
+    </p>
+    <p><strong>Description: </strong> <br>{{ object.description }}</p>
+    <a href="{% url 'commissions:commission_list' %}">Back to all events</a>
+
+{% endblock %}
