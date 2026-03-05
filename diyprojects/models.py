@@ -8,7 +8,7 @@ class ProjectCategory(models.Model):
 
     class Meta:
         ordering = ['name']
-        verbose_name_plural = 'ProjectCategories'
+        verbose_name_plural = 'Project Categories'
 
     def __str__(self):
         return f'{self.name}'
